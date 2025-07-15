@@ -71,7 +71,7 @@ label{
     transition: 0.3s;
 }
 
-/* kulka w przycisku - ZAKTUALIZOWANE */
+/* kulka w przycisku */
 label::after{
     content: "";
     width: 2.5vh;
@@ -97,15 +97,15 @@ input:checked + label{
     background: #242424;
 }
 
-/* przenoszenie przycisku podczas akcji - ZAKTUALIZOWANE */
+/* przenoszenie przycisku podczas akcji */
 input:checked + label:after{
     left: calc(100% - 2.5vh - 0.5vh); /* Pełna szerokość minus szerokość kulki minus odstęp */
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-/* szerokość podczas kliknięcia - ZAKTUALIZOWANE */
+/* szerokość podczas kliknięcia */
 label:active::after{
-    width: 3vh; /* Zwiększenie w vh zamiast px */
+    width: 3vh;
     left: calc(50% - 1.5vh); /* Wyśrodkowanie podczas kliknięcia */
 }
 
