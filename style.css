@@ -163,6 +163,30 @@ label:active::after{
     transition: ease-in-out 0.5s;
 }
 
+/* unvisited link */
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #b1b1b1;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #1a1a1a;
@@ -204,4 +228,28 @@ body.dark-mode main {
 body.dark-mode footer {
     background-color: #1a1a1a;
     color: #ffffff;
+}
+
+/* unvisited link */
+body.dark-mode a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* visited link */
+body.dark-mode a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* mouse over link */
+body.dark-mode a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* selected link */
+body.dark-mode a:active {
+  color: #ffffff;
+  text-decoration: none;
 }
