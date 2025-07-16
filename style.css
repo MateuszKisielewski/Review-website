@@ -187,6 +187,13 @@ a:active {
   text-decoration: none;
 }
 
+/*
+
+Ciemny motyw
+
+*/
+
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: #1a1a1a;
@@ -230,6 +237,11 @@ body.dark-mode footer {
     color: #ffffff;
 }
 
+body.dark-mode main {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
 /* unvisited link */
 body.dark-mode a:link {
   color: #ffffff;
@@ -252,4 +264,114 @@ body.dark-mode a:hover {
 body.dark-mode a:active {
   color: #ffffff;
   text-decoration: none;
+}
+
+body.dark-mode .main_layout{
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .opis_1{
+    background-color: #1a1a1a;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .opis_2{
+    background-color: #1a1a1a;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .img_biurko_2 img{
+    border: solid 1px #ffffff;
+}
+
+body.dark-mode .img_biurko img{
+    border: solid 1px #ffffff;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.main_layout{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 15% 20% 20% 20% 20%;
+    grid-template-rows: 2% 50% 50% 5%;
+    background-color: #ffffff;
+    gap: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.opis_1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #ffffff;
+    border: solid 1px black;
+    border-radius: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    padding: 5%;
+}
+
+.img_biurko{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    /* border: solid 1px black; */
+    border-radius: 60px;
+}
+
+.img_biurko img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 60px;
+}
+
+.img_biurko_2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    /* border: solid 1px black; */
+    border-radius: 60px;
+}
+
+.img_biurko_2 img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 60px;
+}
+
+.opis_2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    border: solid 1px black;
+    background-color: #ffffff;
+    border-radius: 60px;
+     display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    padding: 5%;
 }
