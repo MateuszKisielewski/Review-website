@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homemade reviews</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -28,13 +29,13 @@
     
     <main>
         <div class="main_index_layout">
-            <div class="opis_1">
+            <div class="opis_1" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1900">
                 <h2>O czym jest ten blog</h2>
                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
             </div>
-            <div class="img_biurko"><img src="images/index/desk.jpg"></div>
-            <div class="img_biurko_2"><img src="images/index/do_edycji.jpg"></div>
-            <div class="opis_2">
+            <div class="img_biurko" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1900"><img src="images/index/desk.jpg"></div>
+            <div class="img_biurko_2" data-aos="fade-left" data-aos-duration="700" data-aos-delay="1900"><img src="images/index/do_edycji.jpg"></div>
+            <div class="opis_2" data-aos="fade-left" data-aos-duration="700" data-aos-delay="1900">
                 <h2>Czym się zajmuję na codzień</h2>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
             </div>
@@ -46,5 +47,9 @@
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

@@ -401,11 +401,19 @@ body.dark-mode .img_biurko img{
     grid-row-end: 1;
 }
 
+.iphone_8 img{
+    width: 13vw;
+}
+
 .iphone_13pro{
     grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 2;
+}
+
+.iphone_13pro img{
+    width: 13vw;
 }
 
 .ipad_pro_2gen{
@@ -420,6 +428,10 @@ body.dark-mode .img_biurko img{
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 4;
+}
+
+.apple_watch_8 img{
+    width: 11vw;
 }
 
 .macbook_air_m4{
