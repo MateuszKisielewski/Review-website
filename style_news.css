@@ -1,0 +1,516 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+/* podział nagłówka na kolumny i rzędy */
+.header_menu{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* mega brzydkie (might change later) */
+.menu_1{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.menu_2{
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+.menu_3{
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+.menu_4{
+    grid-column-start: 6;
+    grid-column-end: 6;
+}
+
+.menu_5{
+    grid-column-start: 7;
+    grid-column-end: 7;
+}
+
+.menu_6{
+    grid-column-start: 9;
+    grid-column-end: 9;
+}
+
+/* tło przycisku */
+label{
+    width: 6vh;
+    height: 3.5vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* kulka w przycisku */
+label::after{
+    content: "";
+    width: 2.5vh;
+    height: 2.5vh;
+    position: absolute;
+    top: calc(50% - 1.25vh); /* Wyśrodkowanie w pionie */
+    left: 0.5vh; /* Odstęp od lewej krawędzi */
+    background: linear-gradient(180deg, #efefef, #d8d8d8);
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* chowanie prawdziwego checkboxa */
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* tło po zmianie */
+input:checked + label{
+    background: #242424;
+}
+
+/* przenoszenie przycisku podczas akcji */
+input:checked + label:after{
+    left: calc(100% - 2.5vh - 0.5vh); /* Pełna szerokość minus szerokość kulki minus odstęp */
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+/* szerokość podczas kliknięcia */
+label:active::after{
+    width: 3vh;
+    left: calc(50% - 1.5vh); /* Wyśrodkowanie podczas kliknięcia */
+}
+
+/* wygląd menu (grid) */
+.menu_1, .menu_2, .menu_3, .menu_4, .menu_5, .menu_6{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* zdjęcie menu */
+.menu_3 img{
+    width: 35%;
+}
+
+/* Splash screen */
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo_header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* unvisited link */
+a:link {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: #b1b1b1;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+/*
+
+Ciemny motyw
+
+*/
+
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .main_index_layout{
+    background-color: #1a1a1a;
+}
+
+body.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .header_menu {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .menu_1, 
+body.dark-mode .menu_2, 
+body.dark-mode .menu_3, 
+body.dark-mode .menu_4, 
+body.dark-mode .menu_5 {
+    color: #ffffff;
+}
+
+body.dark-mode .menu_1:hover, 
+body.dark-mode .menu_2:hover, 
+body.dark-mode .menu_4:hover, 
+body.dark-mode .menu_5:hover {
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode for main content */
+body.dark-mode main {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode main {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* unvisited link */
+body.dark-mode a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* visited link */
+body.dark-mode a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* mouse over link */
+body.dark-mode a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* selected link */
+body.dark-mode a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body.dark-mode .main_layout{
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .opis_1{
+    background-color: #1a1a1a;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .opis_2{
+    background-color: #1a1a1a;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .img_biurko_2 img{
+    border: solid 1px #ffffff;
+}
+
+body.dark-mode .img_biurko img{
+    border: solid 1px #ffffff;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.main_index_layout{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 15% 20% 20% 20% 20%;
+    grid-template-rows: 2% 50% 50% 5%;
+    background-color: #ffffff;
+    gap: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.opis_1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: #ffffff;
+    border: solid 1px black;
+    border-radius: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5%;
+}
+
+.img_biurko{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    /* border: solid 1px black; */
+    border-radius: 60px;
+}
+
+.img_biurko img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 60px;
+}
+
+.img_biurko_2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    /* border: solid 1px black; */
+    border-radius: 60px;
+}
+
+.img_biurko_2 img{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+    border-radius: 60px;
+}
+
+.opis_2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3; 
+    grid-row-end: 3;
+    border: solid 1px black;
+    background-color: #ffffff;
+    border-radius: 60px;
+     display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5%;
+}
+
+/* products page */
+
+.main_products_layout {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh;
+    gap: 1%;
+    margin: 2% 15% 2% 15%;
+    background-color: #ffffff;
+}
+.iphone_8 img, .iphone_13pro img, .ipad_pro_2gen img, .apple_watch_8 img, .macbook_air_m4 img, .airpods_pro_2 img{
+    width: 15vw;
+}
+
+.iphone_8{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.iphone_8 img{
+    width: 13vw;
+}
+
+.iphone_13pro{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+.iphone_13pro img{
+    width: 13vw;
+}
+
+.ipad_pro_2gen{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.apple_watch_8{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.apple_watch_8 img{
+    width: 11vw;
+}
+
+.macbook_air_m4{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+
+.airpods_pro_2{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+
+.iphone_8, .iphone_13pro , .ipad_pro_2gen , .apple_watch_8 , .macbook_air_m4 , .airpods_pro_2 {
+    border: solid 1px black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2%;
+}
+
+.iphone_8_text, .iphone_13pro_text, .ipad_pro_2gen_text, .apple_watch_8_text, .macbook_air_m4_text, .airpods_pro_2_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5%;
+    border: solid 1px black;
+    border-radius: 50px;
+    font-size: 1.1rem;
+}
+
+.iphone_8_text{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.iphone_13pro_text{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.ipad_pro_2gen_text{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.apple_watch_8_text{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.macbook_air_m4_text{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 5;
+}
+.airpods_pro_2_text{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+
+body.dark-mode .iphone_8, body.dark-mode .iphone_8_text, body.dark-mode .iphone_13pro, body.dark-mode .iphone_13pro_text, body.dark-mode .ipad_pro_2gen, body.dark-mode .ipad_pro_2gen_text, body.dark-mode .apple_watch_8, body.dark-mode .apple_watch_8_text, body.dark-mode .macbook_air_m4, body.dark-mode .macbook_air_m4_text, body.dark-mode .airpods_pro_2, body.dark-mode .airpods_pro_2_text{
+    color: #ffffff;
+    background-color: #1a1a1a;
+    border: solid 1px #ffffff;
+    border-radius: 50px;
+}
+
+body.dark-mode .main_products_layout{
+    background-color: #1a1a1a;
+}

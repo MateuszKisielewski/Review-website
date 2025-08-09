@@ -6,6 +6,6 @@ Deny from all
 
 RewriteEngine on
 RewriteRule blog index.html
-RewriteRule produkty products.html
-RewriteRule nowosci news.html
-RewriteRule recenzje reviews.html
+RewriteRule products products.html
+RewriteRule news news.html
+RewriteRule reviews reviews.html
