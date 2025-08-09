@@ -330,7 +330,6 @@ body.dark-mode .img_biurko img{
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 2;
-    /* border: solid 1px black; */
     border-radius: 60px;
 }
 
@@ -347,7 +346,6 @@ body.dark-mode .img_biurko img{
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3;
-    /* border: solid 1px black; */
     border-radius: 60px;
 }
 
@@ -373,144 +371,4 @@ body.dark-mode .img_biurko img{
     text-align: center;
     font-size: 1rem;
     padding: 5%;
-}
-
-/* products page */
-
-.main_products_layout {
-    display: grid;
-    grid-template-columns:  repeat(3, 1fr);
-    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh;
-    gap: 1%;
-    margin: 2% 15% 2% 15%;
-    background-color: #ffffff;
-}
-.iphone_8 img, .iphone_13pro img, .ipad_pro_2gen img, .apple_watch_8 img, .macbook_air_m4 img, .airpods_pro_2 img{
-    width: 15vw;
-}
-
-.iphone_8{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-.iphone_8 img{
-    width: 13vw;
-}
-
-.iphone_13pro{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-.iphone_13pro img{
-    width: 13vw;
-}
-
-.ipad_pro_2gen{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
-.apple_watch_8{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-
-.apple_watch_8 img{
-    width: 11vw;
-}
-
-.macbook_air_m4{
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-.airpods_pro_2{
-    grid-column-start: 3;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 6;
-}
-
-.iphone_8, .iphone_13pro , .ipad_pro_2gen , .apple_watch_8 , .macbook_air_m4 , .airpods_pro_2 {
-    border: solid 1px black;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2%;
-}
-
-.iphone_8_text, .iphone_13pro_text, .ipad_pro_2gen_text, .apple_watch_8_text, .macbook_air_m4_text, .airpods_pro_2_text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    padding: 5%;
-    border: solid 1px black;
-    border-radius: 50px;
-    font-size: 1.1rem;
-}
-
-.iphone_8_text{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-.iphone_13pro_text{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-.ipad_pro_2gen_text{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-.apple_watch_8_text{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-
-.macbook_air_m4_text{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-.airpods_pro_2_text{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 6;
-    grid-row-end: 6;
-}
-
-body.dark-mode .iphone_8, body.dark-mode .iphone_8_text, body.dark-mode .iphone_13pro, body.dark-mode .iphone_13pro_text, body.dark-mode .ipad_pro_2gen, body.dark-mode .ipad_pro_2gen_text, body.dark-mode .apple_watch_8, body.dark-mode .apple_watch_8_text, body.dark-mode .macbook_air_m4, body.dark-mode .macbook_air_m4_text, body.dark-mode .airpods_pro_2, body.dark-mode .airpods_pro_2_text{
-    color: #ffffff;
-    background-color: #1a1a1a;
-    border: solid 1px #ffffff;
-    border-radius: 50px;
-}
-
-body.dark-mode .main_products_layout{
-    background-color: #1a1a1a;
 }
