@@ -1,1 +1,1 @@
-przyjazne adresy zamiast adresów .html
+zmienić layout stron, poprawić css tak aby wszystko było w głównym kontenerze i na jego podstawie wyznaczać marginesy oraz zawartość

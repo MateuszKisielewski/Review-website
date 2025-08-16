@@ -295,6 +295,8 @@ body.dark-mode .img_biurko img{
     justify-content: center;
     text-align: center;
     align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .main_index_layout{
@@ -304,8 +306,8 @@ body.dark-mode .img_biurko img{
     grid-template-rows: 2% 50% 50% 5%;
     background-color: #ffffff;
     gap: 3%;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     
 }
 
